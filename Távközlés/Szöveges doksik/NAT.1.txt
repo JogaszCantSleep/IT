@@ -1,0 +1,33 @@
+NAT konfig
+
+
+Head>en
+Password:enapa55 
+Head#conf t
+Head(config)#ip access-list standard NAT
+Head(config-std-nacl)#permit any
+Head(config-std-nacl)#exit
+Head(config)#ip nat inside source list NAT interface s4/0 overload
+Head(config)#do sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     10.0.15.1       YES manual up                    up 
+GigabitEthernet1/0     10.0.15.65      YES manual up                    up 
+Serial2/0              10.10.10.1      YES manual up                    up 
+Serial3/0              10.10.10.5      YES manual up                    up 
+Serial4/0              115.77.12.42    YES manual up                    up
+Head(config)#int g0/0
+Head(config-if)#ip nat ?
+  inside   Inside interface for address translation
+  outside  Outside interface for address translation
+Head(config-if)#ip nat i
+Head(config-if)#ip nat inside 
+Head(config-if)#int g1/0
+Head(config-if)#ip nat inside 
+Head(config-if)#int s2/0
+Head(config-if)#ip nat inside 
+Head(config-if)#int s3/0
+Head(config-if)#ip nat inside 
+Head(config-if)#int s4/0
+Head(config-if)#ip nat o
+Head(config-if)#ip nat outside 
+Head(config-if)#

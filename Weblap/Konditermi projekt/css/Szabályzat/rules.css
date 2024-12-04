@@ -1,0 +1,30 @@
+@media screen and (min-width: 1081px){
+    .rulesbackground{
+        background-color: rgb(53, 53, 53);
+        width: 90%;
+        border: 3px solid rgb(202, 202, 0);
+        margin: auto;
+        color: rgb(165, 165, 165);
+        font-size: 30px;
+        margin-top: 200px;
+        margin-bottom: 100px;
+    }
+    .rulesbackground li{
+        line-height: 250%;
+    }
+}
+@media screen and (max-width: 1080px){
+    .rulesbackground{
+        background-color: rgb(53, 53, 53);
+        width: 90%;
+        border: 3px solid rgb(202, 202, 0);
+        margin: auto;
+        color: rgb(165, 165, 165);
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    .rulesbackground li{
+        line-height: 150%;
+    }
+}

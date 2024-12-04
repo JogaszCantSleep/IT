@@ -1,0 +1,75 @@
+@media screen and (max-width: 1080px){
+    .header{
+        width: 100%;
+        background-color: rgb(32, 32, 32);
+        height: 200px;
+        border-bottom: 5px solid rgb(202, 202, 0);
+    }
+    .header img{
+        width: 380px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 20px
+    }
+    .navbar{
+        margin-left: 50px
+    }
+    .navbar a{
+        color: rgb(165, 165, 165);
+        font-size: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navbar a:hover{
+        border-bottom: 3px solid rgb(202, 202, 0);
+    }
+    .activeheader{
+        border-bottom: 3px solid rgb(202, 202, 0);
+        color:rgb(202, 202, 0) !important
+    }
+}
+@media screen and (min-width: 1081px){
+    .header{
+        width: 100%;
+        background-color: rgb(32, 32, 32);
+        height: 90px;
+        border-bottom: 5px solid rgb(202, 202, 0);
+        position: fixed;
+        z-index: 100;
+        padding: 10px;
+        top: 0px;
+    }
+    .header img{
+        width: 350px;
+        float: left;
+        margin-right: 20px;
+        padding-left: 10px;
+    }
+    .navbar{
+        padding-left: 50px;
+    }
+    .navbar a{
+        color: rgb(165, 165, 165);
+        margin-top: 30px;
+        margin-bottom: 16px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        float: left;
+    }
+    .navbar a:hover{
+        border-bottom: 3px solid rgb(202, 202, 0);
+    }
+    .activeheader{
+        border-bottom: 3px solid rgb(202, 202, 0);
+        color:rgb(202, 202, 0) !important
+    }
+}

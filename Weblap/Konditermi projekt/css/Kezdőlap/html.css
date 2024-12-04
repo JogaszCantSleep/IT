@@ -1,0 +1,45 @@
+@media screen and (max-width: 1080px){
+    body{
+        margin: 0px;
+        font-family: Georgia, serif;
+    }
+    html{
+        scroll-behavior: smooth;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+        -o-user-select:none;
+    }
+}
+@media screen and (min-width: 1081px){
+    body{
+        margin: 0px;
+        font-family: Georgia, serif;
+        background-image: url(/képek/background+text.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+    html{
+        scroll-behavior: smooth;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+        -o-user-select:none;
+    }
+    ::-webkit-scrollbar{
+        width: 15px;
+        height: 20%;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgb(131, 131, 131);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgb(84, 84, 84);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(84, 84, 84);
+    }
+}

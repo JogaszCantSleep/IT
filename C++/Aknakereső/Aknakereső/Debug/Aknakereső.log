@@ -1,0 +1,4 @@
+﻿  Aknakereső.cpp
+C:\Users\BakeR\Desktop\‍\Info\C++\Aknakereső\Aknakereső\Aknakereső.cpp(61,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\BakeR\Desktop\‍\Info\C++\Aknakereső\Aknakereső\Aknakereső.cpp(805,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Aknakereső.vcxproj -> C:\Users\BakeR\Desktop\‍\Info\C++\Aknakereső\Debug\Aknakereső.exe

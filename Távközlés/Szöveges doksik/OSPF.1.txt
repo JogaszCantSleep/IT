@@ -1,0 +1,32 @@
+HEDA------------------------------------------
+en 
+conf t
+router ospf 1
+do sh ip route c
+net x.x.x.x x.x.x.x a 0
+def o
+p g0/0
+p g1/0
+p s4/0
+
+BRANCH-1 -------------------------
+en 
+conf t
+router ospf 1
+do sh ip route c
+net x.x.x.x x.x.x.x a 0
+def o
+passive-interface 
+p 
+p 
+
+BRANCH-2 ------------------------------------
+en 
+conf t
+router ospf 1
+do sh ip route c
+net x.x.x.x x.x.x.x a 0
+def o
+p 
+p 
+p 

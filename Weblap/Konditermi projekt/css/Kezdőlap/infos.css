@@ -1,0 +1,295 @@
+/*Kis képernyőre!*/
+
+@media screen and (max-width: 1080px){
+    
+    .infos_wide{ /*Fontos előre!*/
+        display: none;
+    }
+    
+    .infos_small{
+        width: 100%;
+        background-color: rgb(32, 32, 32);
+        border-top: 5px solid rgb(202, 202, 0);
+        padding-bottom: 30px;
+    }
+    .infos_small .rolunk{
+        background-color: rgb(53, 53, 53);
+        width: 90%;
+        margin-top: 40px;
+        border-radius: 20px 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    .infos_small .rolunk h1{
+        color: white;
+        margin: 0px;
+    }
+    .infos_small .rolunk hr{
+        height: 2px;
+        width: 150px;
+        background-color: rgb(202, 202, 0);
+        border: 1px solid rgb(202, 202, 0);
+        float: left;
+        margin: 0px;
+    }
+    .infos_small .rolunk h2{
+        color: rgb(165, 165, 165);
+    }
+    .infos_small .nyitvatartas{
+        background-color: rgb(53, 53, 53);
+        width: 90%;
+        margin-top: 40px;
+        border-radius: 20px 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    .infos_small .nyitvatartas .cím{
+        color: white;
+        margin: 0px;
+    }
+    .infos_small .nyitvatartas hr{
+        height: 2px;
+        width: 200px;
+        background-color: rgb(202, 202, 0);
+        border: 1px solid rgb(202, 202, 0);
+        float: left;
+        margin: 0px;
+    }
+    .infos_small .nyitvatartas .texth1{
+        color: rgb(165, 165, 165);
+        text-align: center;
+    }
+    .infos_small .hely{
+        background-color: rgb(53, 53, 53);
+        width: 90%;
+        margin-top: 40px;
+        border-radius: 20px 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+        position: relative;
+    }
+    .infos_small .hely .cím{
+        color: white;
+        margin: 0px;
+    }
+    .infos_small .hely hr{
+        height: 2px;
+        width: 80px;
+        background-color: rgb(202, 202, 0);
+        border: 1px solid rgb(202, 202, 0);
+        float: left;
+        margin: 0px;
+    }
+    .infos_small .hely .terkepnagy{
+        margin-top: 20px;
+        width: 90%;
+        border-radius: 10px;
+        position: relative;
+        border: 2px solid rgb(202, 202, 0);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .infos_small .hely .terkepkis{
+        position: absolute;
+        width: 20%;
+        border-radius: 20px;
+        border: 2px solid black;
+        top: 100px;
+        left: 80px;
+    }
+}
+
+/*Nagy képernyőre!*/
+
+@media screen and (min-width: 1081px){
+    
+    .infos_small{ /*Fontos előre!*/
+        display: none;
+    }
+
+    .infos_wide{
+        background-color: rgb(32, 32, 32);
+        border-top: 5px solid rgb(202, 202, 0);
+        width: 100%;
+        margin-top: 40%;
+        padding-bottom: 50px;
+    }
+    .infos_wide .rolunk{
+        background-color: rgb(53, 53, 53);
+        width: 80%;
+        border-radius: 3px 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        border: 1px solid rgb(202, 202, 0);
+    }
+    .infos_wide .rolunk h1{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .infos_wide .rolunk hr{
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 130px;
+    }
+    .infos_wide .rolunk h2{
+        color: rgb(165, 165, 165);
+        padding-left: 20px;
+        font-size: 150%;
+    }
+    .infos_wide .nyitvatartas{
+        background-color: rgb(53, 53, 53);
+        width: 80%;
+        height: 450px;
+        border-radius: 3px 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        border: 1px solid rgb(202, 202, 0);
+        position: relative;
+    }
+    .infos_wide .nyitvatartas h1{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .infos_wide .nyitvatartas .hr_0{
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .infos_wide .nyitvatartas .h2_1{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    .infos_wide .nyitvatartas .h2_2{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+    }
+    .infos_wide .nyitvatartas .h2_3{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 300px;
+        left: 100px;
+    }
+    .infos_wide .nyitvatartas .h2_4{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 100px;
+        right: 80px;
+    }
+    .infos_wide .nyitvatartas .h2_5{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 200px;
+        right: 80px;
+    }
+    .infos_wide .nyitvatartas .h2_6{
+        color: rgb(165, 165, 165);
+        font-size: 300%;
+        position: absolute;
+        top: 300px;
+        right: 80px;
+    }
+    .infos_wide .nyitvatartas .hr_1{
+        position: absolute;
+        top: 190px;
+        left: 10%;
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 80%;
+    }
+    .infos_wide .nyitvatartas .hr_2{
+        position: absolute;
+        top: 290px;
+        left: 10%;
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 80%;
+    }
+    .infos_wide .nyitvatartas .hr_3{
+        position: absolute;
+        top: 390px;
+        left: 10%;
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 80%;
+    }
+    .infos_wide .hely{
+        background-color: rgb(53, 53, 53);
+        width: 80%;
+        border-radius: 3px 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 70px;
+        padding-top: 20px;
+        border: 1px solid rgb(202, 202, 0);
+    }
+    .infos_wide .hely h1{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .infos_wide .hely hr{
+        background-color: rgb(202, 202, 0);
+        border: 3px solid rgb(202, 202, 0);
+        width: 100px;
+        margin-bottom: 50px;
+    }
+    .infos_wide .hely img{
+        margin-top: 20px;
+        width: 90%;
+        border-radius: 10px;
+        border: 2px solid rgb(202, 202, 0);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

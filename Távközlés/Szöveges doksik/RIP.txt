@@ -1,0 +1,8 @@
+RIPv2 konfiguráció
+-------------------
+version 2
+no auto-summary
+do sh ip route c (kilistázza a közvetlen kapcsolt hálózatokat)
+net x.x.x.x (add meg az összes közvetlen kapcsolt hálózatot)
+passive-interface (azok az interfészek amik nem RIP-es router felé vezetnek)
+default-information originate (az alapértelmezett útvonal hírdetése - csak a határ routeren!)

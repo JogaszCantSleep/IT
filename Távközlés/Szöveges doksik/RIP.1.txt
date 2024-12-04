@@ -1,0 +1,173 @@
+Head ----------------------------------------------------------------------------
+en 
+conf t
+host Head
+do sh ip int br
+
+int g0/0
+no shut
+ip add 10.0.15.1 255.255.255.192
+
+int g1/0
+no shut
+ip add 10.0.15.65 255.255.255.192
+
+int s4/0
+no shut
+ip add 115.77.12.42 255.255.255.252
+
+int s3/0
+no shut
+ip add 10.10.10.5 255.255.255.252
+
+
+
+BRANCH-1--------------------------------------------------------------------------
+en
+conf t
+host Branch-1
+do sh ip int br 
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES NVRAM  administratively down down 
+GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
+Serial0/0/0            unassigned      YES NVRAM  administratively down down 
+Serial0/0/1            unassigned      YES NVRAM  administratively down down 
+Vlan1                  unassigned      YES NVRAM  administratively down down
+
+int s0/0/0
+no shut
+ip add 10.10.10.2 255.255.255.252
+
+int g0/0
+no shut
+ip add 192.168.15.1 255.255.255.128
+
+int g0/1
+no shut
+ip add 192.168.15.129 255.255.255.128
+
+
+BRANCH-2--------------------------------------------------------------------------
+
+en
+conf t
+
+host Branch-2
+do sh ip int br
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0     unassigned      YES NVRAM  administratively down down 
+GigabitEthernet0/1     unassigned      YES NVRAM  administratively down down 
+Serial0/0/0            unassigned      YES NVRAM  administratively down down 
+Serial0/0/1            unassigned      YES NVRAM  administratively down down 
+Vlan1                  unassigned      YES NVRAM  administratively down down
+
+int g0/1
+ip add 172.20.15.1 255.255.255.248
+no shut
+
+
+int s0/0/0
+ip add 10.10.10.6 255.255.255.252
+no shut
+
+do wr
+
+
+
+DHCP(lan-a, lan-b) --------------------------------------------------
+HEAD ------------------------------------
+ip dhcp pool LAN-A
+net 10.0.15.0 255.255.255.192
+def 10.0.15.1 
+dns 8.8.8.8
+
+ip dhcp pool LAN-B
+net 10.0.15.64 255.255.255.192
+def 10.0.15.65 
+dns 8.8.8.8
+
+PC3-------------------------------------
+
+192.168.15.126
+255.255.255.128
+192.168.15.1
+8.8.8.8
+
+PC4-------------------------------------
+192.168.15.254
+255.255.255.128
+192.168.15.129
+8.8.8.8
+
+Server PT2------------------------------
+172.20.15.2
+255.255.255.248
+172.20.15.1
+8.8.8.8
+
+Server PT3------------------------------
+172.20.15.3
+255.255.255.248
+172.20.15.1
+8.8.8.8
+
+
+RIP-----------------------------------------------------------------
+Head------------------------------------
+ip route 0.0.0.0 0.0.0.0 s4/0
+
+
+router rip
+ver 2
+no a
+do sh ip route c
+ C   10.0.15.0/26  is directly connected, GigabitEthernet0/0
+ C   10.0.15.64/26  is directly connected, GigabitEthernet1/0
+ C   10.10.10.0/30  is directly connected, Serial2/0
+ C   10.10.10.4/30  is directly connected, Serial3/0
+ C   115.77.12.40/30  is directly connected, Serial4/0
+
+net 10.0.15.0
+net 10.0.15.64
+net 10.10.10.0
+net 10.10.10.4
+net 115.77.12.40
+
+
+Passive inteface-----------------------------------
+passive-interface g0/0
+passive-interface g1/0
+passive-interface s4/0
+
+
+default-information originate
+
+
+Branch-1------------------------------------
+router rip
+ver 2 
+no a
+do sh ip route c
+net 10.10.10.0
+net 192.168.15.0
+net 192.168.15.128
+p g0/0
+p g0/1
+do wr
+
+Branch-2--------------------------------------
+
+en
+conf t
+rouetr rip
+	
+router rip
+ver 2
+no a 
+do sh ip route c
+
+net 10.10.10.4
+net 172.20.15.0
+
+passive-interface g0/1
+

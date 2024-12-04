@@ -1,0 +1,23 @@
+VLSM: 182.25.80.0/24
+--------------------
+11111111.11111111.11111111.10000000
+1.oktet  2.oktet  3.oktet  4.oktet
+--------------------
+Sales (120): 172.25.80.0/25 -> 128
+Marketing: (55): 172.25.80.128/26 -> 64
+Design: (10): 172.25.80.192/28 -> 16
+Management: (5): 172.25.80.208/29 ->8
+		 172.25.80.216
+--------------------
+VLSM számítás lépései:
+1. Az alhálózatok IP cím szerint csökkenő sorrendbe rendezése.
+2. Az osztást a legnagyobb IP igényű alhálózattal kezdjük.
+3. Megkeressük az alhálózat igényének megfelelő alhálózati maszkot (2^x-2>=IP száma).
+   - Ha megvan az "x" érték, akkor a maszk = 32-x -> /maszk (Sales: x = 7, maszk = 32 - 7 = /25)
+4. Ha megvan az első alhálózat maszkj, megkeressük a "bűvös számot", ami az alhálózati maszk utolsó egyes bitjének helyi értéke. (pl. /25 -> 128)
+5. Ha megvan a "bűvös szám", a következő legnagyobb igényű alhálózat hálózati címének kiszámításával folytatjuk a sort. (Marketing)
+6. Nézzük meg, hogy a "bűvös szám" (utolsó egyes bit) az alhálózati maszk hanyadik oktetjétben található (/25 -> 25-ik bit -> 4-ik oktet)
+7. Adjuk hozzá a "bűvös számot" az előző alhálózat IP címének kiszámított oktetjéhez, és így megkaojuk a második (Marketing) alhálózat IP címét.
+8. Ennek az alhálózatnak a maszkját a fentiek megismétlésével végezzük (3. fejezet).
+   - Végezzük az utolsó és egyben legkisebb IP igényű alhálózatig.
+Megjegyzés: Ha egy alhálózat utolsó kiosztható IP címét szeretnénk megkapni, a legegyszerűbb ,ha a következő alhálózati IP címből elveszünk 2-t.

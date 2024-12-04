@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./pics/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Fizza porte</title>
+</head>
+<body id="home">
+    <div class="sidebar" id="sidebar" style="left: -120%">
+        <ul>
+            <li><a class="side_links" href="#home">Home</a></li>
+            <li><a class="side_links" href="#menu">Menu</a></li>
+            <li><a class="side_links" href="#diy">DIY Pizza</a></li>
+            <li><a class="side_links" href="#order">Order</a></li>
+            <li><a class="valentin_btn side_links" href="./Love & Pizza/index.html">Love & Pizza</a></li>
+        </ul>
+    </div>
+    <header>
+        <button class="ham_menu">
+            <svg id="ham_menu" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </button>
+        <ul class="nav_elements">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#diy">DIY Pizza</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a class="valentin_btn" href="./Love & Pizza/index.html">Love & Pizza</a></li>
+        </ul>
+        <img class="logo" src="./pics/logo.png" alt="Fizza Porte" title="Fizza Porte">
+    </header>
+    <div id="cart" class="cart" style="opacity: 1">
+        <div class="cart_icon" id="cart_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+            </svg>
+            <div id="order_amount" class="order_amount">
+
+            </div>
+        </div>
+    </div>
+    <div class="order_site" id="order_site">
+        <div class="title_div">
+            Your Order
+        </div>
+        <div class="container">
+
+        </div>
+        <div class="price_final">
+            <div class="fees">
+                <ul>
+                    <li id="service_fee">- service fee: </li>
+                    <li id="delivery_fee">- delivery fee: </li>
+                    <li id="pizzas_price">- pizzas: </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <button id="clear_order" class="reset_btn">Reset Order</button>
+                <h2 id="final_price" class="price">
+                    Final price: 
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="welcome_text">
+        <div>
+            <div class="left">
+                <h1>You can't buy happines,</h1>
+            </div>
+            <div class="right">
+                <h1>But you can buy pizza!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu_text">
+            <h1>Menu</h1>
+        </div>
+        <div class="container">
+            <div class="unit_container">
+                <div class="unit">
+                    <img class="pizza" src="./pics/margherita.png" alt="Margherita" title="Margherita">
+                    <div class="unit_text">
+                        <h1 class="title">Margherita</h1>
+                        <p class="toppings">Tomato sauce, cheese</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_1" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,30 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/hawaii.png" alt="Hawaii" title="Hawaii">
+                    <div class="unit_text">
+                        <h1 class="title">Hawaii</h1>
+                        <p class="toppings">Tomato sauce, cheese, pineapple, onions, tomato</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_2" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/hell.png" alt="Hell" title="Hell">
+                    <div class="unit_text">
+                        <h1 class="title">Hell</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, tomato, hellfire sauce, carolina reaper</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_3" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,20 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/bolognese.png" alt="Bolognese" title="Bolognese">
+                    <div class="unit_text">
+                        <h1 class="title">Bolognese</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, onions, bolognese sauce, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_4" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,50 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/vegetarian.png" alt="Vegetarian" title="Vegetarian">
+                    <div class="unit_text">
+                        <h1 class="title">Vegetarian</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, tomato, onion, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_5" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">5,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/meat_lover.png" alt="Meat Lover" title="Meat Lover">
+                    <div class="unit_text">
+                        <h1 class="title">Meat Lover</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, onions, chicken, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_6" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,80 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/cheezy.png" alt="Cheezy" title="Cheezy">
+                    <div class="unit_text">
+                        <h1 class="title">Cheezy</h1>
+                        <p class="toppings">Tomato sauce, mozzarella, parmesan, olive, tomato, pepperoni, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_7" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,60 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/pepperoni.png" alt="Pepperoni" title="Pepperoni">
+                    <div class="unit_text">
+                        <h1 class="title">Pepperoni</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_8" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/nemo.png" alt="Nemo" title="Nemo">
+                    <div class="unit_text">
+                        <h1 class="title">Nemo</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, spinach, tuna</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_9" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">8,20 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/bbq.png" alt="BBQ" title="BBQ">
+                    <div class="unit_text">
+                        <h1 class="title">BBQ</h1>
+                        <p class="toppings">Tomato sauce, cheese, mozzarella, pepperoni, olive, onions, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_10" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_container">
+                <button id="menu_order" class="btn_incart">
+                    Place in cart
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="diy" id="diy">
+        <div class="diy_text">
+            <h1>DIY Pizza</h1>
+        </div>
+        <div class="container">
+            <div class="select_container">
+                <div class="pizza_board">
+                    <img class="pizza_pics" id="pizza" src="./pics/diy/pizza.png">
+                    <img class="pizza_pics sauce_pics" id="tomato_sauce" src="./pics/diy/tomato_sauce.png">
+                    <img class="pizza_pics sauce_pics" id="pesto_sauce" src="./pics/diy/pesto_sauce.png">
+                    <img class="pizza_pics sauce_pics" id="garlic_sauce" src="./pics/diy/garlic_sauce.png">
+                    <img class="pizza_pics" id="cheese" src="./pics/diy/cheese.png">
+                    <img class="pizza_pics" id="corn" src="./pics/diy/corn.png">
+                    <img class="pizza_pics" id="pepperoni" src="./pics/diy/pepperoni.png">
+                    <img class="pizza_pics" id="mushrooms" src="./pics/diy/mushrooms.png">
+                    <img class="pizza_pics" id="onions" src="./pics/diy/onions.png">
+                    <img class="pizza_pics" id="pineapple" src="./pics/diy/pineapple.png">
+                    <img class="pizza_pics" id="ham" src="./pics/diy/ham.png">
+                    <img class="pizza_pics" id="spinach" src="./pics/diy/spinach.png">
+                    <img class="pizza_pics" id="tomato" src="./pics/diy/tomato.png">
+                    <img class="pizza_pics" id="tuna" src="./pics/diy/tuna.png">
+                    <img class="pizza_pics" id="broccoli" src="./pics/diy/broccoli.png">
+                    <img class="pizza_pics" id="olives" src="./pics/diy/olives.png">
+                    <img class="pizza_pics" id="slicing" src="./pics/diy/slicing.png">
+                </div>
+                <div class="select_board">
+                    <div class="size">
+                        <div class="title">
+                            Size
+                        </div>
+                        <div class="select">
+                            <div>
+                                <input class="size_select" id="radio_size_20" type="radio" name="size">
+                                <label for="radio_size_20" id="radio_size_20_label">20cm</label>
+                            </div>
+                            <div>
+                                <input class="size_select" id="radio_size_30" type="radio" name="size">
+                                <label for="radio_size_30" id="radio_size_30_label">30cm</label>
+                            </div>
+                            <div>
+                                <input class="size_select" id="radio_size_40" type="radio" name="size">
+                                <label for="radio_size_40" id="radio_size_40_label">40cm</label>
+                            </div>
+                            <div>
+                                <input class="size_select" id="radio_size_50" type="radio" name="size">
+                                <label for="radio_size_50" id="radio_size_50_label">50cm</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sauces">
+                        <div class="title">
+                            Sauces
+                        </div>
+                        <div class="select">
+                            <div>
+                                <input class="sauce_select" id="radio_tomato_sauce" name="sauce" type="radio">
+                                <label for="radio_tomato_sauce" id="radio_tomato_sauce_label">Tomato</label>
+                            </div>
+                            <div>
+                                <input class="sauce_select" id="radio_pesto_sauce" name="sauce" type="radio">
+                                <label for="radio_pesto_sauce" id="radio_pesto_sauce_label">Pesto</label>
+                            </div>
+                            <div>
+                                <input class="sauce_select" id="radio_garlic_sauce" name="sauce" type="radio">
+                                <label for="radio_garlic_sauce" id="radio_garlic_sauce_label">Garlic</label>
+                            </div>
+                            <div>
+                                <input class="sauce_select" id="radio_no_sauce" name="sauce" type="radio">
+                                <label for="radio_no_sauce" id="radio_no_sauce_label">No sauce</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toppings">
+                        <div class="title">
+                            Toppings
+                        </div>
+                        <div class="select">
+                            <div class="cheese_btn_div" id="cheese_btn_div">
+                                <input id="check_cheese" type="checkbox">
+                                <label for="check_cheese" id="check_cheese_label">Cheese</label>
+                            </div>
+                            <div class="corn_btn_div" id="corn_btn_div">
+                                <input id="check_corn" type="checkbox">
+                                <label for="check_corn" id="check_corn_label">Corn</label>
+                            </div>
+                            <div class="pepperoni_btn_div" id="pepperoni_btn_div">
+                                <input id="check_pepperoni" type="checkbox">
+                                <label for="check_pepperoni" id="check_pepperoni_label">Pepperoni</label>
+                            </div>
+                            <div class="mushrooms_btn_div" id="mushrooms_btn_div">
+                                <input id="check_mushrooms" type="checkbox">
+                                <label for="check_mushrooms" id="check_mushrooms_label">Mushrooms</label>
+                            </div>
+                            <div class="onions_btn_div" id="onions_btn_div">
+                                <input id="check_onions" type="checkbox">
+                                <label for="check_onions" id="check_onions_label">Onions</label>
+                            </div>
+                            <div class="pineapple_btn_div" id="pineapple_btn_div">
+                                <input id="check_pineapple" type="checkbox">
+                                <label for="check_pineapple" id="check_pineapple_label">Pineapple</label>
+                            </div>
+                            <div class="ham_btn_div" id="ham_btn_div">
+                                <input id="check_ham" type="checkbox">
+                                <label for="check_ham" id="check_ham_label">ham</label>
+                            </div>
+                            <div class="spinach_btn_div" id="spinach_btn_div">
+                                <input id="check_spinach" type="checkbox">
+                                <label for="check_spinach" id="check_spinach_label">Spinach</label>
+                            </div>
+                            <div class="tomato_btn_div" id="tomato_btn_div">
+                                <input id="check_tomato" type="checkbox">
+                                <label for="check_tomato" id="check_tomato_label">Tomato</label>
+                            </div>
+                            <div class="tuna_btn_div" id="tuna_btn_div">
+                                <input id="check_tuna" type="checkbox">
+                                <label for="check_tuna" id="check_tuna_label">Tuna</label>
+                            </div>
+                            <div class="broccoli_btn_div" id="broccoli_btn_div">
+                                <input id="check_broccoli" type="checkbox">
+                                <label for="check_broccoli" id="check_broccoli_label">Broccoli</label>
+                            </div>
+                            <div class="olives_btn_div" id="olives_btn_div">
+                                <input id="check_olives" type="checkbox">
+                                <label for="check_olives" id="check_olives_label">Olives</label>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="diy_btn">
+                <button id="pizza_reset" class="reset">Reset Pizza</button>
+                <button id="diy_order" class="next">Place in cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="order" id="order">
+        <div class="order_text">
+            <h1>Order</h1>
+        </div>
+        <div class="container">
+            <div class="input_container">
+                <div class="column">
+                    <div class="input_box">
+                        <input type="text" placeholder="First Name">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input_box">
+                        <input type="text" placeholder="State">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="Road">
+                    </div>
+                    <div class="input_box">
+                        <input type="text" placeholder="House">
+                    </div>
+                </div>
+            </div>
+            <div class="message_box">
+                <textarea placeholder="Message"></textarea>
+            </div>
+            <div class="btn_container">
+                <button class="btn_remember">
+                    Remember Me
+                </button>
+                <button class="btn_order">
+                    Order
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2023 Fizza Porte, LLC. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

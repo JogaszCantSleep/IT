@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body{
+    background: linear-gradient(110deg, rgb(20, 20, 20) 20%, #272727);
+    background-attachment: fixed;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 19px;
+    color: #Faf0e6;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: default;
+    color: var(--main-color);
+    margin: 0;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 700;
+    animation: logo 2s steps(1);
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo{
+    90%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    92%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    100%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+}
+
+.logo span{
+    color: var(--main-color);
+    text-shadow: none;
+    animation: logo-flicker 2s steps(1);
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes logo-flicker{
+    0%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    20%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    22%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    66%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    68%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    70%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    74%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    86%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    88%{
+        color: var(--main-color);
+        text-shadow: none;
+    }
+    100%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+}
+
+.nav_links{
+    list-style: none;
+    margin: 0;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding:  0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.2s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    animation: link-flicker 500ms steps(1);
+}
+
+@keyframes link-flicker{
+    30%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    31%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    35%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    55%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    59%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+}
+
+button{
+    padding: 6px 22px;
+    margin-left: 20px;
+    background-color: rgb(236, 40, 40);
+    border: 3px solid rgb(236, 40, 40);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 0px 15px 0px rgb(236, 40, 40);
+}
+
+button:hover{
+    background: transparent;
+    color: rgb(255, 171, 171);
+    border: 3px solid rgb(255, 171, 171);
+    text-shadow: 0 0 7px rgb(236, 40, 40), 0 0 10px rgb(236, 40, 40);
+    animation: button-flicker 500ms steps(1);
+}
+
+@keyframes button-flicker{
+    30%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    31%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    35%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    55%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    59%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+}
+
+.now_here{
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+}
+
+.row{
+    margin: 0;
+    padding-top: 40px;
+}
+
+.left_side p{
+    color: #Faf0e6;
+    font-size: 50px;
+    padding-top: 17%;
+    cursor: default;
+    line-height: 70px;
+}
+
+.name{
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.name:hover{
+    animation: name-flicker 2s steps(1);
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+}
+
+@keyframes name-flicker{
+    9%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    10%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+    }
+    12%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    20%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+    }
+    22%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    40%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+    }
+    44%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    100%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 20px rgb(236, 40, 40), 0 0 40px rgb(236, 40, 40);
+    }
+}
+
+.small_text{
+    font-size: 25px !important;
+    padding: 0 !important;
+    line-height: 30px !important;
+}
+
+.highlight{
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+}
+
+.icons{
+    padding-top: 30px;
+}
+
+.icons a{
+    margin-right: 30px;
+    color: rgb(236, 40, 40);
+}
+
+.facebook, .instagram, .whatsapp, .snapchat{
+    transition: 400ms;
+}
+
+.facebook:hover{
+    color: rgb(87, 123, 240);
+}
+
+.instagram:hover{
+    color: rgb(247, 67, 166);
+}
+
+.whatsapp:hover{
+    color: rgb(64, 214, 64);
+}
+
+.snapchat:hover{
+    color: rgb(255, 255, 15);
+}
+
+.download_cv{
+    margin: 0;
+    margin-top: 40px;
+}
+
+.right_side{
+    padding-top: 3%;
+}
+
+.me{
+    width: 100%;
+    border-bottom: 10px dashed #Faf0e6;
+    border-right: 10px dashed #Faf0e6;
+}

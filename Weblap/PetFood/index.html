@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./pics/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Fizza porte</title>
+</head>
+<body id="home">
+    <div class="sidebar" id="sidebar" style="left: -120%">
+        <ul>
+            <li><a class="side_links" href="#home">Home</a></li>
+            <li><a class="side_links" href="#menu">Menu</a></li>
+            <li><a class="side_links" href="#diy">DIY Pizza</a></li>
+            <li><a class="side_links" href="#order">Order</a></li>
+            <li><a class="valentin_btn side_links" href="./Love & Pizza/index.html">Love & Pizza</a></li>
+        </ul>
+    </div>
+    <header>
+        <button class="ham_menu">
+            <svg id="ham_menu" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </button>
+        <ul class="nav_elements">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#diy">DIY Pizza</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a class="valentin_btn" href="./Love & Pizza/index.html">Love & Pizza</a></li>
+        </ul>
+        <img class="logo" src="./pics/logo.png" alt="Fizza Porte" title="Fizza Porte">
+    </header>
+    <div id="cart" class="cart" style="opacity: 1">
+        <div class="cart_icon" id="cart_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+            </svg>
+            <div id="order_amount" class="order_amount">
+
+            </div>
+        </div>
+    </div>
+    <div class="order_site" id="order_site">
+        <div class="title_div">
+            Your Order
+        </div>
+        <div class="container">
+
+        </div>
+        <div class="price_final">
+            <div class="fees">
+                <ul>
+                    <li id="service_fee">- service fee: </li>
+                    <li id="delivery_fee">- delivery fee: </li>
+                    <li id="pizzas_price">- pizzas: </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <button id="clear_order" class="reset_btn">Reset Order</button>
+                <h2 id="final_price" class="price">
+                    Final price: 
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="welcome_text">
+        <div>
+            <div class="left">
+                <h1>You can't buy happines,</h1>
+            </div>
+            <div class="right">
+                <h1>But you can buy pizza!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu_text">
+            <h1>Menu</h1>
+        </div>
+        <div class="container">
+            <div class="unit_container">
+                <div class="unit">
+                    <img class="pizza" src="./pics/margherita.png" alt="Margherita" title="Margherita">
+                    <div class="unit_text">
+                        <h1 class="title">Margherita</h1>
+                        <p class="toppings">Tomato sauce, cheese</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_1" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,30 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/hawaii.png" alt="Hawaii" title="Hawaii">
+                    <div class="unit_text">
+                        <h1 class="title">Hawaii</h1>
+                        <p class="toppings">Tomato sauce, cheese, pineapple, onions, tomato</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_2" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/hell.png" alt="Hell" title="Hell">
+                    <div class="unit_text">
+                        <h1 class="title">Hell</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, tomato, hellfire sauce, carolina reaper</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_3" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,20 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/bolognese.png" alt="Bolognese" title="Bolognese">
+                    <div class="unit_text">
+                        <h1 class="title">Bolognese</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, onions, bolognese sauce, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_4" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">6,50 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/vegetarian.png" alt="Vegetarian" title="Vegetarian">
+                    <div class="unit_text">
+                        <h1 class="title">Vegetarian</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, tomato, onion, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_5" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">5,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/meat_lover.png" alt="Meat Lover" title="Meat Lover">
+                    <div class="unit_text">
+                        <h1 class="title">Meat Lover</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, onions, chicken, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_6" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,80 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/cheezy.png" alt="Cheezy" title="Cheezy">
+                    <div class="unit_text">
+                        <h1 class="title">Cheezy</h1>
+                        <p class="toppings">Tomato sauce, mozzarella, parmesan, olive, tomato, pepperoni, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_7" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,60 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/pepperoni.png" alt="Pepperoni" title="Pepperoni">
+                    <div class="unit_text">
+                        <h1 class="title">Pepperoni</h1>
+                        <p class="toppings">Tomato sauce, cheese, pepperoni, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_8" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/nemo.png" alt="Nemo" title="Nemo">
+                    <div class="unit_text">
+                        <h1 class="title">Nemo</h1>
+                        <p class="toppings">Tomato sauce, cheese, olive, spinach, tuna</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_9" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">8,20 $</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="unit">
+                    <img class="pizza" src="./pics/bbq.png" alt="BBQ" title="BBQ">
+                    <div class="unit_text">
+                        <h1 class="title">BBQ</h1>
+                        <p class="toppings">Tomato sauce, cheese, mozzarella, pepperoni, olive, onions, spinach</p>
+                        <div class="quantity">
+                            <button>I want 
+                                <input id="numin_10" type="number" onKeyDown="return false" min="0" max="10">
+                            </button>
+                        </div>
+                        <div class="price_div">
+                            <h2 class="price">7,90 $</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_container">
+                <button id="menu_order" class="btn_incart">
+                    Place in cart
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2023 Fizza Porte, LLC. All Rights Reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

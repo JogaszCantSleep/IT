@@ -1,0 +1,10 @@
+NAT konfiguráció:
+
+ip acces-list NAT
+       permit any
+ip nat inside source list NAT int s4/0 overload
+int f2/0
+	ip nat inside
+--------------------------
+int s4/0
+	ip nat outside

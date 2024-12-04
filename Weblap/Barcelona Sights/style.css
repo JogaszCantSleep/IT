@@ -1,0 +1,185 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+body{
+    background: url(./pics/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    padding: 1vh;
+    background-color: white;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    box-shadow: 0 0 10px 1px black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header .logo{
+    height: 100%;
+}
+
+header .nav_menu{
+    display: flex;
+    list-style: none;
+    gap: 3vh;
+}
+
+header .nav_menu .nav_element a{
+    text-decoration: none;
+    color: black;
+    font-size: 2.2vh;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.15s;
+    transform-origin: left;
+}
+
+header .nav_menu .nav_element a:hover{
+    border-bottom: 2px solid rgb(40, 171, 223);
+}
+
+header .nav_menu hr{
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+header .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    outline: none;
+    font-size: 2.5vh;
+    font-weight: 500;
+    width: 17vh;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 0.5vh;
+    color: black;
+    transition: 0.15s;
+    background-color: none;
+}
+
+header .contact:hover{
+    scale: 1.05;
+    border: 2px solid black;
+    color: rgb(40, 171, 223);
+}
+
+.hero_image{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.hero_image img{
+    max-height: 25vh;
+}
+
+.container{
+    border-top: 1px solid rgb(180, 180, 180);
+    box-shadow: 0 0 10px 1px black;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container .hero{
+    height: calc(100vh - 60vh - 1px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    padding: 1vh;
+}
+
+.container .hero hr{
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+.container .hero .bucket_list{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 0 5vh;
+}
+
+.container .hero .bucket_list .title{
+    font-size: 3.5vh;
+    font-weight: 650;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.233);
+}
+
+.container .hero .bucket_list .list{
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1vh;
+    padding-left: 4vh;
+}
+
+.container .hero .bucket_list .list li{
+    height: 100%;
+    text-decoration: underline;
+    font-size: 2vh;
+}
+
+.container .hero .tbb{
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 0 5vh;
+}
+
+.container .hero .tbb .title{
+    font-size: 3.5vh;
+    font-weight: 650;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.233);
+}
+
+.container .hero .tbb .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vh;
+    flex-grow: 1;
+    padding: 1vh 4vh;
+}
+
+.container .hero .tbb .image{
+    flex-grow: 1;
+    background: url(./pics/tbb_content.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    border-radius: 1vh;
+    box-shadow: 0 0 10px 1px;
+}
+
+.container .hero .tbb .text{
+    border: 1px solid red;
+    flex-grow: 1;
+    padding: 1vh;
+}

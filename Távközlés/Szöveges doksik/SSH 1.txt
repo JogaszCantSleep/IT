@@ -1,0 +1,11 @@
+ip domain name cisco.com (bármilyen kitalált tartománynév)
+enable scret enapa55
+username admin scret sshpa55
+line vty 0 15
+login local
+# transport input ssh
+
+
+crypto key generate rsa
+1024 bit
+# ip ssh ver 2

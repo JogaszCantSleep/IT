@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body{
+    background: linear-gradient(110deg, rgb(20, 20, 20) 20%, #272727);
+    background-attachment: fixed;
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 19px;
+    color: #Faf0e6;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: default;
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    margin: 0;
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav_links{
+    list-style: none;
+    margin: 0;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding:  0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.2s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: rgb(255, 171, 171);
+    text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    animation: link-flicker 500ms steps(1);
+}
+
+@keyframes link-flicker{
+    30%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    31%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    35%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    55%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    59%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+}
+
+.contact_button{
+    padding: 6px 22px;
+    margin-left: 20px;
+    border-radius: 50px;
+    cursor: default;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 0px 15px 0px rgb(236, 40, 40);
+    background-color: rgb(20, 18, 18);
+    color: rgb(255, 171, 171);
+    border: 3px solid rgb(255, 171, 171);
+    text-shadow: 0 0 7px rgb(236, 40, 40), 0 0 10px rgb(236, 40, 40);
+}
+
+button:hover{
+    background: transparent;
+    color: rgb(255, 171, 171);
+    border: 3px solid rgb(255, 171, 171);
+    text-shadow: 0 0 7px rgb(236, 40, 40), 0 0 10px rgb(236, 40, 40);
+    animation: button-flicker 500ms steps(1);
+}
+
+@keyframes button-flicker{
+    30%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    31%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    35%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+    55%{
+        color: rgb(255, 171, 171);
+        text-shadow: 0 0 6px rgb(236, 40, 40), 0 0 20px rgb(236, 40, 40);
+    }
+    59%{
+        color: rgb(36, 36, 36);
+        text-shadow: none;
+    }
+}
+
+.main_h1{
+    color: #Faf0e6;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.row{
+    margin: 0;
+    text-align: center;
+}
+
+.row p{
+    color: #Faf0e6;
+}
+
+.icons{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.icons a{
+    color: rgb(236, 40, 40);
+    text-shadow: 0 0 7px rgb(236, 40, 40), 0 0 10px rgb(236, 40, 40);
+    margin: 0px 20px;
+}
+
+.facebook, .instagram, .whatsapp, .youtube{
+    transition: 400ms;
+}
+
+.facebook:hover{
+    color: rgb(87, 123, 240);
+}
+
+.instagram:hover{
+    color: rgb(247, 67, 166);
+}
+
+.whatsapp:hover{
+    color: rgb(64, 214, 64);
+}
+
+.youtube:hover{
+    color: red;
+}
+
+.email{
+    margin-top: 50px;
+}

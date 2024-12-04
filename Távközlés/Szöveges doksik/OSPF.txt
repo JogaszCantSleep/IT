@@ -1,0 +1,4 @@
+router ospf # (# folyamatazonosító szám 1-65536)
+network x.x.x.x x.x.x.x area 0
+passive-interface g0/0
+deffault-information originate

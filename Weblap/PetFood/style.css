@@ -1,0 +1,1196 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    scroll-behavior: smooth;
+}
+
+img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.952)), url(./pics/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    padding: 2vw 5vw;
+    background-color: rgba(34, 34, 34, 0.514);
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 10px 1px black;
+    z-index: 1000;
+}
+
+header .ham_menu{
+    display: none;
+    align-self: center;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .ham_menu svg{
+    width: 8vh;
+    height: 8vh;
+    fill: white;
+    border: 1px solid transparent;
+    background: none;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.125s;
+}
+
+header .ham_menu svg:hover{
+    background-color: white;
+    fill: black;
+    box-shadow: 0 0 10px 2px white;
+}
+
+header .nav_elements{
+    gap: 0.4em;
+}
+
+header .nav_elements li{
+    display: inline-block;
+    font-size: 1.4vw;
+}
+
+.nav_elements li a{
+    text-decoration: none;
+    padding: 0.2em 0.6em;
+    border-radius: 40px;
+    color: white;
+    margin-right: 10px;
+    transition: 0.125s;
+}
+
+.nav_elements li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+}
+
+.nav_elements li .valentin_btn{
+    margin-left: 10px;
+    background: url(./pics/valentin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 2px rgb(255, 147, 165);
+    transition: 0.125s;
+}
+
+.nav_elements li .valentin_btn:hover{
+    box-shadow: 0 0 20px 5px rgb(255, 147, 165);
+}
+
+header .logo{
+    width: 30vh;
+}
+
+.cart{
+    transition: 0.125s;
+}
+
+.cart, .cart > *{
+    z-index: 1001;
+}
+
+.cart .cart_icon{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.125s;
+    border-radius: 50px;
+}
+
+.cart .cart_icon svg{
+    width: 6vh;
+    height: 6vh;
+    fill: black;
+    background-color: white;
+    outline: none;
+    border-radius: 50px;
+    transition: 0.125s;
+    padding: 5px;
+}
+
+.cart .cart_icon svg:hover{
+    fill: white;
+    background-color: black;
+}
+
+.cart .cart_icon .order_amount{
+    position: fixed;
+    top: 90px;
+    right: 60px;
+    background-color: red;
+    border: 1px solid black;
+    color: white;
+    border-radius: 25px;
+    width: 3vh;
+    height: 3vh;
+    text-align: center;
+    font-size: 1.9vh;
+    transition: 0.125s;
+    display: none;
+    cursor: default;
+}
+
+.order_site{
+    display: none;
+    position: fixed;
+    top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.767);
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.order_site .title_div{
+    height: 15vh;
+    width: 100%;
+    border-bottom: 4px dashed rgba(255, 255, 255, 0.068);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 12vh;
+    font-weight: 100;
+}
+
+.order_site .price_final{
+    position: fixed;
+    height: 18.5vh;
+    left: calc(2vh + 1px);
+    right: calc(2vh + 1px);
+    bottom: 2vh;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    background-color: rgba(59, 59, 59, 0.973);
+    border-top: 1px solid rgba(255, 255, 255, 0.068);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vh;
+    z-index: 100;
+}
+
+.order_site .price_final .fees{
+    flex: 1;
+    padding-left: 2vh;
+    border-bottom: 1px solid white;
+    padding-bottom: 1vh;
+}
+
+.order_site .price_final .fees li{
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.548);
+    list-style: none;
+}
+
+.order_site .price_final .bottom{
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh 0 2vh;
+}
+
+.order_site .price_final .bottom .reset_btn{
+    background-color: rgb(168, 0, 0);
+    box-shadow: 0 0 15px 2px black inset;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 1.5vh;
+    width: 15vh;
+    height: 6vh;
+    font-size: 2.4vh;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.order_site .price_final .bottom .reset_btn:hover{
+    scale: 1.1;
+    border: 1px solid white;
+}
+
+.order_site .price_final .bottom .price{
+    border-bottom: 2px solid white;
+    font-size: 3vh;
+    color: white;
+}
+
+.order_site .container{
+    margin: 2vh;
+    padding: 2vh;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    border-radius: 3vh;
+    height: calc(100% - 15vh - 4vh);
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: calc(18.5vh + 20px);
+}
+
+.order_site .container .unit{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 4px double rgba(255, 255, 255, 0.322);
+    box-shadow: 0 0 10px 2px black;
+    transition: 0.15s;
+    gap: 1vh;
+    cursor: default;
+    height: 21.5vh;
+    position: relative;
+}
+
+.order_site .container .unit .topping:first-child{
+    background: linear-gradient(rgba(0, 0, 0, 0.37), rgba(0, 0, 0, 0.37)), url(./pics/wood_background.png);
+    border-right: 4px double rgba(255, 255, 255, 0.452);
+}
+
+.order_site .container .unit .topping:not(:first-child){
+    position: absolute;
+    height: 100%;
+}
+
+.order_site .container .unit .topping_1{
+    z-index: 50;
+}
+
+.order_site .container .unit .topping_2{
+    z-index: 51;
+}
+
+.order_site .container .unit .topping_3{
+    z-index: 52;
+}
+
+.order_site .container .unit .topping_4{
+    z-index: 53;
+}
+
+.order_site .container .unit .topping_5{
+    z-index: 54;
+}
+
+.order_site .container .unit .topping_6{
+    z-index: 55;
+}
+
+.order_site .container .unit .topping_7{
+    z-index: 56;
+}
+
+.order_site .container .unit .topping_8{
+    z-index: 57;
+}
+
+.order_site .container .unit .topping_9{
+    z-index: 58;
+}
+
+.order_site .container .unit .topping_10{
+    z-index: 59;
+}
+
+.order_site .container .unit .topping_11{
+    z-index: 60;
+}
+
+.order_site .container .unit .topping_12{
+    z-index: 61;
+}
+
+.order_site .container .unit .topping_13{
+    z-index: 62;
+}
+
+.order_site .container .unit .topping_14{
+    z-index: 63;
+}
+
+.order_site .container .unit .topping_15{
+    z-index: 64;
+}
+
+.order_site .container .unit .unit_text{
+    color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5px 5px 0 0;
+}
+
+.order_site .container .unit .unit_text h1{
+    color: white;
+    font-size: 3vh;
+    border-bottom: 1px solid white;
+}
+
+.order_site .container .unit .unit_text p{
+    font-size: 1.8vh;
+    color: rgb(100, 100, 100);
+}
+
+.order_site .container .unit .unit_text .price{
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    border-bottom: 2px solid white;
+    font-size: 3vh;
+}
+
+.order_site .container .unit:hover{
+    background-color: rgba(255, 255, 255, 0.116);
+    scale: 1.01;
+}
+
+.sidebar{
+    background-color: rgba(34, 34, 34, 0.514);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    display: none;
+    transition: 0.5s;
+    margin-top: 80px;
+    backdrop-filter: blur(15px);
+    z-index: 1001;
+    outline: none;
+    border: none;
+    border-top: 1px solid white;
+}
+
+.sidebar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+    padding: 0.6em 0;
+    transition: 0.125s;
+}
+
+.sidebar ul li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: 0 0 7px 1px rgb(255, 255, 255);
+}
+
+.sidebar ul li .valentin_btn{
+    background: url(./pics/valentin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 2px rgb(255, 147, 165);
+}
+
+.sidebar ul li .valentin_btn:hover{
+    box-shadow: 0 0 20px 5px rgb(255, 147, 165);
+}
+
+.welcome_text{
+    margin: 0 6vw;
+    cursor: default;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome_text h1{
+    font-family: 'Fasthand', cursive;
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 6.5vw;
+    letter-spacing: 0.9vw;
+}
+
+.welcome_text div{
+    flex: 1;
+}
+
+.welcome_text div .left{
+    text-align: left;
+}
+
+.welcome_text div .right{
+    text-align: right;
+}
+
+.menu{
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 0 20vw 3vw inset rgb(0, 0, 0);
+    border-radius: 4vh;
+    margin: 0 3vw 5vw 3vw;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.menu .menu_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 4px dashed rgba(255, 255, 255, 0.068);
+}
+
+.menu .menu_text h1{
+    color: white;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20vh;
+    font-weight: 100;
+}
+
+.menu .container{
+    margin: 1vw;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    border-radius: 3vh;
+}
+
+.menu .container .unit_container{
+    gap: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.menu .container .unit_container .unit{
+    border: 4px double rgba(255, 255, 255, 0.322);
+    border-top-right-radius: 50px;
+    box-shadow: 0 0 10px 2px black;
+    transition: 0.15s;
+    display: flex;
+    gap: 1vh;
+    cursor: default;
+    height: 21vh;
+}
+
+.menu .container .unit_container .unit:hover{
+    scale: 1.05;
+}
+
+.menu .container .unit_container .unit .pizza{
+    transition: 0.125s;
+}
+
+.menu .container .unit_container .unit .pizza:hover{
+    border-radius: 20px;
+    border: 1px solid white;
+    scale: 1.5;
+    z-index: 100;
+    transform: translateX(2.5vh);
+}
+
+.menu .container .unit_container .unit .unit_text{
+    color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 5px 5px 0 0;
+}
+
+.menu .container .unit_container .unit .unit_text h1{
+    font-size: 3vh;
+    border-bottom: 1px solid white;
+}
+
+.menu .container .unit_container .unit .unit_text p{
+    font-size: 1.8vh;
+    color: rgb(100, 100, 100);
+}
+
+.menu .container .unit_container .unit .unit_text .quantity{
+    position: absolute;
+    bottom: 1vh;
+}
+
+.menu .container .unit_container .unit .unit_text .quantity button{
+    background: none;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.5vh;
+    color: white;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.menu .container .unit_container .unit .unit_text .quantity button:hover{
+    scale: 1.2;
+}
+
+.menu .container .unit_container .unit .unit_text .quantity button input{
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.322);
+    outline: none;
+    color: white;
+    font-size: 2vh;
+    padding-left: 0.3vh;
+    height: 2.7vh;
+    width: 5vh;
+    cursor: default;
+}
+
+.menu .container .unit_container .unit .unit_text .quantity button input::-webkit-inner-spin-button{
+    opacity: 1;
+}
+
+.menu .container .unit_container .unit .unit_text .price{
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    border-bottom: 2px solid white;
+    font-size: 3vh;
+}
+
+.menu .container .btn_container{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.menu .container .btn_container .btn_incart{
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 2.5vh;
+    width: 200px;
+    height: 7vh;
+    font-size: 2.4vh;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgb(0, 87, 12);
+    box-shadow: 0 0 15px 2px black inset;
+    transition: 0.15s;
+}
+
+.menu .btn_container .btn_incart:hover{
+    scale: 1.1;
+    border: 1px solid white;
+}
+
+.diy{
+    padding: 2vh;
+    margin: 5vw 0;
+    display: grid;
+    gap: 10px;
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 0 20vw 3vw inset rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.diy .diy_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 4px dashed rgba(255, 255, 255, 0.068);
+}
+
+.diy .diy_text h1{
+    color: white;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20vh;
+    font-weight: 100;
+    margin: 0 30px;
+}
+
+.diy .container{
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    border-radius: 3vh;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+.diy .container .select_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.diy .container .select_container .pizza_board{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.623)), url(./pics/wood_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.diy .container .select_container .pizza_board img{
+    height: 39vw;
+    width: auto;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.diy .container .select_container .pizza_board #pizza{
+    z-index: 50;
+}
+
+.diy .container .select_container .pizza_board #tomato_sauce,
+.diy .container .select_container .pizza_board #pesto_sauce,
+.diy .container .select_container .pizza_board #garlic_sauce{
+    z-index: 51;
+    opacity: 0;
+}
+
+.diy .container .select_container .pizza_board #cheese{
+    z-index: 52;
+    opacity: 0;
+}
+
+.diy .container .select_container .pizza_board img:not(#pizza, #tomato_sauce, #pesto_sauce, #garlic_sauce, #cheese, #slicing){
+    z-index: 53;
+    opacity: 0;
+}
+
+.diy .container .select_container .pizza_board #slicing{
+    z-index: 54;
+}
+
+.diy .container .select_container .select_board{
+    gap: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.diy .container .select_container .select_board .size{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.diy .container .select_container .select_board .size .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3vh;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.068);
+}
+
+.diy .container .select_container .select_board .size .select{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 1vh;
+}
+
+.diy .container .select_container .select_board .size .select div{
+    gap: 10px;
+}
+
+.diy .container .select_container .select_board .size .select div input[type="radio"]{
+    display: none;
+}
+
+.diy .container .select_container .select_board .size .select div label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.diy .container .select_container .select_board .size .select div label:hover{
+    scale: 1.03;
+    border: 2px dashed white;
+}
+
+.diy .container .select_container .select_board .sauces{
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.diy .container .select_container .select_board .sauces .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3vh;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.068);
+}
+
+.diy .container .select_container .select_board .sauces .select{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 1vh;
+}
+
+.diy .container .select_container .select_board .sauces .select div input[type="radio"]{
+    display: none;
+}
+
+.diy .container .select_container .select_board .sauces .select div label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.diy .container .select_container .select_board .sauces .select div label:hover{
+    scale: 1.03;
+    border: 2px dashed white;
+}
+
+.diy .container .select_container .select_board .toppings{
+    gap: 10px;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.diy .container .select_container .select_board .toppings .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3vh;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.068);
+}
+
+.diy .container .select_container .select_board .toppings .select{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 1vh;
+}
+
+.diy .container .select_container .select_board .toppings .select div{
+    transition: 0.125s;
+    border-radius: 1vh;
+    outline: 2px dashed rgba(255, 255, 255, 0.068);
+}
+
+.diy .container .select_container .select_board .toppings .select div:hover{
+    scale: 1.03;
+    outline: 2px dashed white;
+}
+
+.diy .container .select_container .select_board .toppings .select .cheese_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/cheese_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .corn_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/corn_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .pepperoni_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/pepperoni_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .mushrooms_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/mushrooms_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .onions_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/onions_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .pineapple_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/pineapple_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .ham_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/ham_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .spinach_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/spinach_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .tomato_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/tomato_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .tuna_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/tuna_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .broccoli_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/broccoli_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select .olives_btn_div{
+    background: linear-gradient(rgba(0, 0, 0, 0.281),rgba(0, 0, 0, 0.842)), url(./pics/diy/toppings_btn/olives_btn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.diy .container .select_container .select_board .toppings .select div input[type="checkbox"]{
+    display: none;
+}
+
+.diy .container .select_container .select_board .toppings .select div label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2vh;
+    border-radius: 1vh;
+    cursor: pointer;
+    color: white;
+}
+
+.diy .container .diy_btn{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 2px dashed rgba(255, 255, 255, 0.068);
+    border-radius: 2vh;
+}
+
+.diy .container .diy_btn button{
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 2.5vh;
+    width: 20vh;
+    height: 7vh;
+    font-size: 2.4vh;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.diy .container .diy_btn button:hover{
+    scale: 1.1;
+    border: 1px solid white;
+}
+
+.diy .container .diy_btn .reset{
+    background-color: rgb(168, 0, 0);
+    box-shadow: 0 0 15px 2px black inset;
+}
+
+.diy .container .diy_btn .next{
+    background-color: rgb(0, 87, 12);
+    box-shadow: 0 0 15px 2px black inset;
+}
+
+.order{
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0 0 20vw 10vw inset rgb(0, 0, 0);
+    display: grid;
+    padding: 2vh;
+    margin: 5vw 0;
+}
+
+.order .order_text{
+    display: flex;
+    justify-content: center;
+}
+
+.order .order_text h1{
+    color: white;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20vh;
+    font-weight: 100;
+    border-bottom: 5px dotted white;
+    margin-bottom: 8vh;
+}
+
+.order .container{
+    background-color: rgba(255, 255, 255, 0.034);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    padding: 2vh;
+    border-radius: 5vh;
+    display: grid;
+    gap: 4vh;
+}
+
+.order .container .input_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 2vh;
+}
+
+.order .container .input_container .column{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 2vh;
+}
+
+.order .container .input_container .column .input_box{
+    border: 2px dashed rgba(255, 255, 255, 0.582);
+    padding: 1vh;
+    border-radius: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order .container .input_container .column .input_box input{
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 2.4vh;
+    padding: 1vh;
+}
+
+.order .container .message_box{
+    border-radius: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(255, 255, 255, 0.582);
+}
+
+.order .container .message_box textarea{
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    height: 20vh;
+    color: white;
+    font-size: 2.4vh;
+    padding: 1vh 2.5vh 1vh 2.5vh;
+    resize: none;
+}
+
+.order .btn_container{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    margin-top: 2vh;
+    padding: 10px;
+}
+
+.order .btn_container button{
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 2.5vh;
+    width: 20vh;
+    height: 7vh;
+    font-size: 2.4vh;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.order .btn_container button:hover{
+    scale: 1.1;
+    border: 1px solid white;
+}
+
+.order .btn_container .btn_remember{
+    background-color: rgb(168, 0, 0);
+    box-shadow: 0 0 15px 2px black inset;
+}
+
+.order .btn_container .btn_order{
+    background-color: rgb(0, 87, 12);
+    box-shadow: 0 0 15px 2px black inset;
+}
+
+footer{
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 2vh;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1100px){
+    ::-webkit-scrollbar{
+        width: 0px;
+    }
+
+    header .nav_elements *{
+        display: none;
+    }
+
+    header .ham_menu{
+        display: flex;
+    }
+
+    .sidebar{
+        display: block;
+    }
+
+    .menu .container .unit_container{
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .menu .unit_container .unit{
+        border: 4px double rgba(255, 255, 255, 0.322);
+        height: 15vh;
+    }
+
+    .menu .unit_container .unit .unit_text h1{
+        font-size: 2.5vh;
+    }
+    
+    .menu .unit_container .unit .unit_text p{
+        font-size: 1.4vh;
+    }
+    
+    .menu .unit_container .unit .unit_text .price{
+        position: absolute;
+        font-size: 1.6vh;
+    }
+
+    .diy .diy_text h1{
+        font-size: 15vw;
+        font-weight: 100;
+    }
+
+    .diy .container .select_container{
+        grid-template-columns: 1fr;
+    }
+
+    .order .container .select_container .input_container{
+        grid-template-columns: 1fr;
+    }
+
+    .diy .container .select_container .pizza_board{
+        height: 92vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .diy .container .select_container .pizza_board img{
+        height: 85vw;
+    }
+
+    .diy .container .select_container .select_board .size .select{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .diy .container .select_container .select_board .sauces .select{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .diy .container .select_container .select_board .toppings .select .unit .input_box{
+        grid-template-columns: 1fr 4fr;
+    }
+}

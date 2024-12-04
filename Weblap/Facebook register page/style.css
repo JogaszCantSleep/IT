@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body{
+    background: linear-gradient(rgb(252, 254, 255), rgb(213, 218, 230));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar{
+    background: linear-gradient(rgb(89, 118, 175), rgb(54, 80, 139));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(38, 54, 83);
+    padding-top: 20px;
+}
+
+.navbar .logo_div h1{
+    font-weight: 600;
+    font-size: 40px;
+    font-family: 'Facebook Sans', sans-serif;
+    color: white;
+}
+
+.navbar .login_div table tr td{
+    padding-right: 10px;
+    padding-bottom: 4px;
+}
+
+.navbar .login_div table tr .above_text{
+    font-size: 10px;
+    color: white;
+}
+
+.navbar .login_div table tr .user_inp input{
+    height: 20px;
+    width: 140px;
+    border: 2px solid rgb(86, 118, 172);
+}
+
+.navbar .login_div table tr .pass_inp input{
+    height: 20px;
+    width: 140px;
+    border: 1px solid rgb(26, 41, 67);
+}
+
+.navbar .login_div table tr .login_btn button{
+    height: 20px;
+    border: 1px solid rgb(48, 78, 146);
+    background-color: rgb(80, 107, 168);
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    padding: 3px;
+}
+
+.navbar .login_div table tr .login_btn button:hover{
+    background-color: rgb(101, 120, 165);
+}
+
+.navbar .login_div table tr .remember_me{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar .login_div table tr .remember_me label{
+    font-size: 10px;
+    color: rgb(158, 174, 202);
+}
+
+.navbar .login_div table tr .remember_me input{
+    accent-color: white;
+}
+
+.navbar .login_div table tr .forget a{
+    text-decoration: none;
+    font-size: 10px;
+    color: rgb(158, 174, 202);
+    letter-spacing: 0px;
+}
+
+.navbar .login_div table tr .forget a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 40px;
+    padding: 50px;
+    max-height: 85vh;
+}
+
+.container .left p{
+    color: rgb(36, 69, 105);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container .left img{
+    width: 100%;
+    scale: 0.9;
+}
+
+.container .right h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.container .right h2{
+    font-size: 25px;
+    margin: 15px 0 15px 0;
+    font-weight: 400;
+}
+
+.container .right p{
+    font-size: 12px;
+    margin: 15px 0 15px 0;
+    font-weight: 400;
+    color: rgb(87, 88, 93);
+}
+
+.container .right .name_div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 5px;
+}
+
+.container .right .name_div input{
+    height: 35px;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid rgb(123, 123, 123);
+}
+
+.container .right .tel_pass{
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+}
+
+.container .right .tel_pass input{
+    height: 35px;
+    padding-left: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid rgb(123, 123, 123);
+}
+
+.container .right .birth{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container .right .birth select{
+    width: 70px;
+    height: 30px;
+}
+
+.container .right .birth a{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(16, 68, 123);
+    font-weight: 600;
+}
+
+.container .right .birth a:hover{
+    text-decoration: underline;
+}
+
+.container .right .gender{
+    padding: 10px 10px 10px 0;
+}
+
+.container .right .gender input{
+    margin: 5px;
+}
+
+.container .right .accepting a{
+    text-decoration: none;
+    color: rgb(16, 68, 123);
+    font-weight: 600;
+}
+
+.container .right .accepting a:hover{
+    text-decoration: underline;
+}
+
+.container .right .reg_btn{
+    background: linear-gradient(rgb(105, 172, 83), rgb(95, 140, 80));
+    height: 40px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid rgb(73, 98, 70);
+}
+
+.container .right .create a{
+    text-decoration: none;
+    color: rgb(16, 68, 123);
+    font-weight: 600;
+}
+
+.container .right .create a:hover{
+    text-decoration: underline;
+}
