@@ -31,10 +31,9 @@ body{
     width: 100%;
     height: 13vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     top: 0;
-    z-index: 1000;
 }
 
 .head .navbar div{
@@ -46,19 +45,19 @@ body{
 }
 
 .head .navbar .logo_div .logo{
-    font-size: 2em;
+    font-size: 1.6vw;
     font-weight: 400;
 }
 
 .head .navbar .nav_menu_div .nav_menu{
     display: flex;
     flex-direction: row;
-    gap: 3em;
+    gap: 2.6vw;
 }
 
 .head .navbar .nav_menu_div .nav_menu .nav_element a{
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 2vh;
     font-weight: 400;
     letter-spacing: 0.1em;
     border-bottom: 2px solid transparent;
@@ -69,10 +68,6 @@ body{
     color: rgb(160, 160, 160);
     border-bottom: 2px solid rgb(160, 160, 160);
     cursor: pointer;
-}
-
-.active_nav_element{
-    border-bottom: 2px solid white !important;
 }
 
 .head .navbar .cta_div .cta{
@@ -132,7 +127,7 @@ body{
     transition: background-color 0.1s;
 }
 
-.head .hero_outer .hero .cta_div .cta:hover{
+.head .hero_outer .hero .cta:hover{
     background-color: rgb(33, 126, 115);
     cursor: pointer;
 }
@@ -314,6 +309,11 @@ body{
     margin-top: 2vw;
 }
 
+.middle_cta .cta:hover{
+    background-color: rgb(33, 126, 115);
+    cursor: pointer;
+}
+
 .proposition{
     background-color: white;
     width: 100%;
@@ -379,6 +379,112 @@ body{
 .proposition .content_area .proposition_list .list_element .description{
     color: rgb(100, 100, 100);
     font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.7vw;
+}
+
+.testimonials{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6vh;
+}
+
+.testimonials .title{
+    color: black;
+    font-size: 3.1em;
+    font-weight: 400;
+    line-height: 3vw;
+}
+
+.testimonials .testimonials_container{
+    display: flex;
+    gap: 4vh;
+}
+
+.testimonials .testimonials_container .unit{
+    background-color: white;
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.testimonials .testimonials_container .unit .fa-quote-left{
+    font-size: 2.5em;
+    color: rgb(42, 157, 143);
+}
+
+.testimonials .testimonials_container .unit .description{
+    color: rgb(100, 100, 100);
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.7vw;
+}
+
+.testimonials .testimonials_container .unit .author_name{
+    color: black;
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.7vw;
+}
+
+.convincing_cta{
+    background-color: rgb(47, 49, 49);
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.convincing_cta .section_name{
+    font-size: 1.2vw;
+    font-weight: 300;
+    letter-spacing: 0.05vw;
+}
+
+.convincing_cta .title{
+    color: white;
+    font-size: 3.1em;
+    font-weight: 400;
+    line-height: 6vh;
+    text-align: center;
+}
+
+.convincing_cta .cta{
+    background-color: rgb(42, 157, 143);
+    font-size: 1.3em;
+    font-weight: 400;
+    height: 3.5rem;
+    width: 14rem;
+    outline: none;
+    border: none;
+    transition: background-color 0.1s;
+}
+
+.convincing_cta .cta:hover{
+    background-color: rgb(33, 126, 115);
+    cursor: pointer;
+}
+
+.footer{
+    background-color: white;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .description{
+    color: rgb(100, 100, 100);
+    font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7vw;
 }
