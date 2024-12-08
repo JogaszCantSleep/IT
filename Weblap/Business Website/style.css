@@ -1,0 +1,729 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --ff-html: "Kanit", sans-serif;
+
+    --color-white: rgb(255, 255, 255);
+    --color-black: rgb(0, 0, 0);
+    --color-light-gray: rgb(94, 94, 94);
+    --color-teal: rgb(42, 157, 143);
+    --color-mint-green: rgb(236, 244, 243);
+    --color-dark-gray: rgb(47, 49, 49);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-html);
+    font-weight: 500;
+}
+
+h1{
+    font-size: var(--fs-titleXL);
+    line-height: 1.1em;
+    font-weight: 400;
+}
+
+h2{
+    font-size: var(--fs-titleL);
+    line-height: 1.2em;
+    font-weight: 400;
+}
+
+h3{
+    font-size: var(--fs-titleM);
+    font-weight: 400;
+}
+
+h4{
+    font-size: var(--fs-titleS);
+    font-weight: 300;
+}
+
+p{
+    font-size: var(--fs-cta-desc);
+    color: var(--color-light-gray);
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+.cta{
+    outline: none;
+    border: none;
+    font-size: var(--fs-cta-desc);
+    height: 2.8em;
+    width: 11em;
+    color: var(--color-white);
+    background-color: var(--color-teal);
+    transition: background-color .05s linear;
+}
+
+.cta:hover{
+    background-color: rgb(29, 109, 100);
+    cursor: pointer;
+}
+
+/* Phone */
+@media (max-width: 1024px) {
+    :root{
+        --fs-titleXL: clamp(2rem, 2vw + 5vh, 5rem);
+        --fs-titleL: clamp(1.5rem, 1.5vw + 2.3vh, 3.2rem);
+        --fs-titleM: clamp(0.8rem, 1vw + 2vh, 2rem);
+        --fs-titleS: clamp(1rem, 1vw + 1.5vh, 2rem);
+        --fs-cta-desc: clamp(0.5rem, 1vw + 1vh, 1.3rem);
+        --fs-nav-element: clamp(0.8rem, 0.5vw + 1vh, 1.1rem);
+    }
+
+    .head{
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./pics/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+        background-color: rgb(211, 214, 181);
+    }
+
+    .head .navbar{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2em;
+    }
+
+    .head .navbar .logo_div{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+    }
+
+    .head .navbar .logo_div .logo{
+        color: var(--color-white);
+        font-size: var(--fs-titleM);
+        font-weight: 400;
+    }
+    
+    .head .navbar .nav_menu{
+        display: none;
+    }
+
+    .head .navbar .cta_div{
+        display: none;
+    }
+
+    .head .navbar .ham_menu{
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .head .navbar .ham_menu .fa-bars{
+        font-size: var(--fs-titleM);
+        padding: 0.4em 0.5em;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+
+    .head .hero{
+        width: 100%;
+        height: calc(70vh - (10vh + 8vh));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .head .hero .section_name{
+        color: var(--color-white);
+    }
+
+    .head .hero .title{
+        text-align: center;
+        color: var(--color-white);
+    }
+
+    .about{
+        background-color: var(--color-mint-green);
+        height: 180vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12vh;
+        padding-bottom: 8vh;
+    }
+    
+    .about .about_headline{
+        width: 92%;
+        height: 83vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: -8vh;
+    }
+
+    .about .about_headline .text_outer{
+        background-color: var(--color-white);
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_headline .text_outer .text_inner{
+        height: 90%;
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .about .about_headline .text_outer .text_inner .section_name{
+        color: var(--color-teal);
+    }
+
+    .about .about_headline .image_container{
+        width: 100%;
+        flex: 1;
+        background-image: url(./pics/about-us.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .about .values{
+        flex: 1;
+        width: 92%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .about .values .title_texts{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        gap: 2vh;
+    }
+
+    .about .values .title_texts .section_name{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+    }
+
+    .about .values .title_texts .title{
+        font-size: var(--fs-titleL);
+    }
+
+    .about .values .values_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        width: 100%;
+    }
+
+    .about .values .values_list .list_element{
+    }
+
+    .about .values .values_list .list_element{
+    }
+
+    .about .values .values_list .list_element .number{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+        line-height: 3em;
+    }
+
+    .middle_cta{
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./pics/middle_cta_background.jpg);
+        height: 43vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .middle_cta .section_name{
+        color: var(--color-white);
+        font-size: var(--fs-titleS);
+    }
+
+    .middle_cta .title{
+        color: var(--color-white);
+        font-size: var(--fs-titleL);
+        text-align: center;
+        width: 90%;
+    }
+
+    .proposition{
+        background-color: var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 10vh 3vh;
+    }
+
+    .proposition .text_area{
+        height: 100%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .proposition .text_area .section_name{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+    }
+
+    .proposition .text_area .title{
+        font-size: var(--fs-titleL);
+    }
+
+    .proposition .proposition_list{
+        height: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .proposition .proposition_list .list_element{
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .testimonials{
+        background-color: var(--color-mint-green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8vh;
+        padding: 10vh 3vh;
+    }
+
+    .testimonials .title{
+        font-size: var(--fs-titleL);
+        text-align: center;
+        width: 90%;
+    }
+
+    .testimonials .testimonials_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .testimonials .testimonials_list .list_element{
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        padding: 4vh 4vh;
+        gap: 2vh;
+    }
+
+    .testimonials .testimonials_list .list_element .icon{
+        color: var(--color-teal);
+        font-size: clamp(2rem, 2vw + 4vh, 2.5rem);
+    }
+
+    .testimonials .testimonials_list .list_element .description q{
+        font-weight: 300;
+    }
+
+    .convincing{
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./pics/convincing_background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+        padding: 10vh 5vh;
+    }
+
+    .convincing .section_name{
+        color: var(--color-white);
+        font-size: var(--fs-titleS);
+    }
+
+    .convincing .title{
+        color: var(--color-white);
+        font-size: var(--fs-titleL);
+        text-align: center;
+    }
+
+    .footer{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .description{
+        font-size: clamp(1rem, 0.8vw + 0.4vh, 1.1rem);
+        font-weight: 300;
+    }
+}
+
+/* Desktop screen */
+@media (min-width: 1025px) {
+    :root{
+        --fs-titleXL: clamp(2rem, 2vw + 4vh, 5rem);
+        --fs-titleL: clamp(1.5rem, 1.5vw + 2.3vh, 3.2rem);
+        --fs-titleM: clamp(0.8rem, 1vw + 1vh, 2rem);
+        --fs-titleS: clamp(0.7rem, 1vw + 0.5vh, 1.4rem);
+        --fs-cta-desc: clamp(0.5rem, 1vw + 0.5vh, 1.3rem);
+        --fs-nav-element: clamp(0.8rem, 0.5vw + 1vh, 1.1rem);
+    }
+
+    .head{
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./pics/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(211, 214, 181);
+    }
+
+    .head .navbar{
+        width: 100%;
+        height: 13vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head .navbar .logo_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+    }
+
+    .head .navbar .logo_div .logo{
+        color: var(--color-white);
+        font-size: var(--fs-titleM);
+        font-weight: 400;
+    }
+    
+    .head .navbar .nav_menu{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .head .navbar .nav_menu .nav_element{
+        text-decoration: none;
+        font-size: var(--fs-nav-element);
+        letter-spacing: 0.1em;
+        color: var(--color-white)
+    }
+
+    .head .navbar .cta_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 100%;
+    }
+
+    .head .navbar .ham_menu{
+        display: none;
+    }
+
+    .head .hero{
+        width: 100%;
+        height: calc(100vh - (13vh + 15vh));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(1em, 1vw + 1.5vh, 2em);
+    }
+
+    .head .hero .section_name{
+        color: var(--color-white);
+    }
+
+    .head .hero .title{
+        text-align: center;
+        color: var(--color-white);
+    }
+
+    .about{
+        background-color: var(--color-mint-green);
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_headline{
+        width: 79%;
+        height: 83vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-top: -15vh;
+    }
+
+    .about .about_headline .text_outer{
+        background-color: var(--color-white);
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .about_headline .text_outer .text_inner{
+        height: 65%;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .about .about_headline .text_outer .text_inner .section_name{
+        color: var(--color-teal);
+    }
+
+    .about .about_headline .image_container{
+        height: 100%;
+        flex: 1;
+        background-image: url(./pics/about-us.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .about .values{
+        flex: 1;
+        width: 79%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 9vh;
+    }
+
+    .about .values .title_texts{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 75%;
+        gap: 2vh;
+    }
+
+    .about .values .title_texts .section_name{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+    }
+
+    .about .values .title_texts .title{
+        font-size: var(--fs-titleL);
+    }
+
+    .about .values .values_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 4vh;
+        width: 92%;
+    }
+
+    .about .values .values_list .list_element{
+    }
+
+    .about .values .values_list .list_element{
+    }
+
+    .about .values .values_list .list_element .number{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+        line-height: 3em;
+    }
+
+    .middle_cta{
+        background-color: var(--color-dark-gray);
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .middle_cta .section_name{
+        color: var(--color-white);
+        font-size: var(--fs-titleS);
+    }
+
+    .middle_cta .title{
+        color: var(--color-white);
+        font-size: var(--fs-titleL);
+        text-align: center;
+        width: 65%;
+    }
+
+    .proposition{
+        background-color: var(--color-white);
+        height: 85vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .proposition .text_area{
+        height: 100%;
+        width: 40%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .proposition .text_area .section_name{
+        color: var(--color-teal);
+        font-size: var(--fs-titleS);
+        width: 70%;
+    }
+
+    .proposition .text_area .title{
+        font-size: var(--fs-titleL);
+        width: 70%;
+    }
+
+    .proposition .text_area .description{
+        width: 70%;
+    }
+
+    .proposition .proposition_list{
+        height: 100%;
+        width: 40%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .proposition .proposition_list .list_element{
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .testimonials{
+        height: 80vh;
+        background-color: var(--color-mint-green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8vh;
+    }
+
+    .testimonials .title{
+        font-size: var(--fs-titleL);
+    }
+
+    .testimonials .testimonials_list{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 4vh;
+    }
+
+    .testimonials .testimonials_list .list_element{
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        padding: 3vh 3vh;
+        gap: 2vh;
+    }
+
+    .testimonials .testimonials_list .list_element .icon{
+        color: var(--color-teal);
+        font-size: clamp(1.5rem, 1.5vw + 2vh, 2.5rem);
+    }
+
+    .testimonials .testimonials_list .list_element .description q{
+        font-weight: 300;
+    }
+
+    .convincing{
+        background-color: var(--color-dark-gray);
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .convincing .section_name{
+        color: var(--color-white);
+        font-size: var(--fs-titleS);
+    }
+
+    .convincing .title{
+        color: var(--color-white);
+        font-size: var(--fs-titleL);
+        text-align: center;
+        width: 60%;
+    }
+
+    .footer{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .description{
+        font-size: clamp(0.7rem, 0.8vw + 0.4vh, 1.1rem);
+        font-weight: 300;
+    }
+}
